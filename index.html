@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PWA Boilerplate</title>
+  </head>
+  <body>
+    <!-- Just drop the following script into the body of your index.html -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service_worker.js");
+        });
+      }
+    </script>
+  </body>
+</html>
