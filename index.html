@@ -2,13 +2,15 @@
 <html>
   <head>
     <title>PWA Boilerplate</title>
+    <!-- Drop manifest into the head -->
+    <link rel="manifest" href="./manifest.webmanifest" />
   </head>
   <body>
     <!-- Just drop the following script into the body of your index.html -->
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
-          navigator.serviceWorker.register("/service_worker.js");
+          navigator.serviceWorker.register("/service-worker.js");
         });
       }
     </script>
